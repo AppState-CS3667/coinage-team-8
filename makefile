@@ -43,7 +43,7 @@ clean:
 test: $(JUNIT5_JAR)
 	java -cp .:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path 
 
-check: mystyle.xml Cookie.java 
+check: mystyle.xml 
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml # Enter filename here  
 demo: Demo.java
 	java Demo  
