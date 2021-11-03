@@ -8,4 +8,6 @@ public abstract class Coin {
         countryCode = c;
         denomination = d;
     }
+
+    public 
 }
