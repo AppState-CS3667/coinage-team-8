@@ -9,5 +9,15 @@ public abstract class Coin {
         denomination = d;
     }
 
-    public 
+    public String getName() {
+        return name;
+    }
+
+    public String getCountryCode() {
+        return counryCode;
+    }
+
+    public double getDenomination() {
+        return denomination;
+    }
 }
