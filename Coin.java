@@ -14,7 +14,7 @@ public abstract class Coin {
     }
 
     public String getCountryCode() {
-        return counryCode;
+        return countryCode;
     }
 
     public double getDenomination() {
