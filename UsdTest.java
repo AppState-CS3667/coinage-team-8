@@ -21,21 +21,21 @@ public class UsdTest{
 	static Dime dime; 
 	static Quarter quarter;
 	static HalfDollar halfDollar;
-	static Dollar halfDollar;
+	static Dollar dollar;
 
-	String expectedPennyResult;
-	String expectedNickelResult;
-	String expectedDimeResult;
-	String expectedQuarterResult;
-	String expectedHalfDollarResult;
-	String expectedDollarResult;
+	static String expectedPennyResult;
+	static String expectedNickelResult;
+	static String expectedDimeResult;
+	static String expectedQuarterResult;
+	static String expectedHalfDollarResult;
+	static String expectedDollarResult;
 
-	String testOutputPenny;
-	String testOutputNickel;
-	String testOutputDime;
-	String testOutputQuarter;
-	String testOutputHalfDollar;
-	String testOutputDollar;
+	static String testOutputPenny;
+	static String testOutputNickel;
+	static String testOutputDime;
+	static String testOutputQuarter;
+	static String testOutputHalfDollar;
+	static String testOutputDollar;
 
     @Test
     public void testConstructor() {
@@ -62,6 +62,12 @@ public class UsdTest{
 
     @Test
     public void testGetName() {
+	penny = new Penny();
+	nickel = new Nickel();
+	dime= new Dime();
+	quarter = new Quarter();
+	halfDollar = new HalfDollar();
+	dollar = new Dollar();
 
 	expectedPennyResult = "Penny";
 	expectedNickelResult= "Nickel";
@@ -85,27 +91,33 @@ public class UsdTest{
 	testOutputDollar = dollar.getName();
 
 	assertTrue(expectedPennyResult.equals(testOutputPenny),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedPennyResult 
+		   + "' but got '" + testOutputPenny + "'.");
 	assertTrue(expectedNickelResult.equals(testOutputNickel),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedNickelResult 
+		   + "' but got '" + testOutputNickel + "'.");
 	assertTrue(expectedDimeResult.equals(testOutputDime),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");	
+		   "Expected:'" + expectedDimeResult 
+		   + "' but got '" + testOutputDime + "'.");	
 	assertTrue(expectedQuarterResult.equals(testOutputQuarter),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedQuarterResult 
+		   + "' but got '" + testOutputQuarter + "'.");
 	assertTrue(expectedHalfDollarResult.equals(testOutputHalfDollar),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedHalfDollarResult 
+		   + "' but got '" + testOutputHalfDollar + "'.");
 	assertTrue(expectedDollarResult.equals(testOutputDollar),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedDollarResult 
+		   + "' but got '" + testOutputDollar + "'.");
     }
 
     @Test
     public void testGetCountryCode() {
+	penny = new Penny();
+	nickel = new Nickel();
+	dime= new Dime();
+	quarter = new Quarter();
+	halfDollar = new HalfDollar();
+	dollar = new Dollar();
 
 	expectedPennyResult = "USD";
 	expectedNickelResult= "USD";
@@ -129,34 +141,41 @@ public class UsdTest{
 	testOutputDollar = dollar.getCountryCode();
 
 	assertTrue(expectedPennyResult.equals(testOutputPenny),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedPennyResult 
+		   + "' but got '" + testOutputPenny + "'.");
 	assertTrue(expectedNickelResult.equals(testOutputNickel),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedNickelResult 
+		   + "' but got '" + testOutputNickel + "'.");
 	assertTrue(expectedDimeResult.equals(testOutputDime),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");	
+		   "Expected:'" + expectedDimeResult 
+		   + "' but got '" + testOutputDime + "'.");	
 	assertTrue(expectedQuarterResult.equals(testOutputQuarter),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedQuarterResult 
+		   + "' but got '" + testOutputQuarter + "'.");
 	assertTrue(expectedHalfDollarResult.equals(testOutputHalfDollar),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedHalfDollarResult 
+		   + "' but got '" + testOutputHalfDollar + "'.");
 	assertTrue(expectedDollarResult.equals(testOutputDollar),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedDollarResult 
+		   + "' but got '" + testOutputDollar + "'.");
  
     }
 	@Test
     public void testGetDenomination() {
 
+	penny = new Penny();
+	nickel = new Nickel();
+	dime= new Dime();
+	quarter = new Quarter();
+	halfDollar = new HalfDollar();
+	dollar = new Dollar();
+
 	expectedPennyResult = "0.01";
 	expectedNickelResult= "0.05";
-	expectedDimeResult= "0.10";
+	expectedDimeResult= "0.1";
 	expectedQuarterResult= "0.25";
-	expectedHalfDollarResult= "0.50"; 
-	expectedDollarResult= "1.00"; 
+	expectedHalfDollarResult= "0.5"; 
+	expectedDollarResult= "1.0"; 
 
 	testOutputPenny = null;
 	testOutputNickel= null;
@@ -173,23 +192,23 @@ public class UsdTest{
 	testOutputDollar = String.valueOf(dollar.getDenomination());
 
 	assertTrue(expectedPennyResult.equals(testOutputPenny),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedPennyResult 
+		   + "' but got '" + testOutputPenny + "'.");
 	assertTrue(expectedNickelResult.equals(testOutputNickel),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedNickelResult 
+		   + "' but got '" + testOutputNickel + "'.");
 	assertTrue(expectedDimeResult.equals(testOutputDime),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");	
+		   "Expected:'" + expectedDimeResult 
+		   + "' but got '" + testOutputDime + "'.");	
 	assertTrue(expectedQuarterResult.equals(testOutputQuarter),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedQuarterResult 
+		   + "' but got '" + testOutputQuarter + "'.");
 	assertTrue(expectedHalfDollarResult.equals(testOutputHalfDollar),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedHalfDollarResult 
+		   + "' but got '" + testOutputHalfDollar + "'.");
 	assertTrue(expectedDollarResult.equals(testOutputDollar),
-		   "Expected:'" + expectedResult 
-		   + "' but got '" + testOutput + "'.");
+		   "Expected:'" + expectedDollarResult 
+		   + "' but got '" + testOutputDollar + "'.");
  
     }
 

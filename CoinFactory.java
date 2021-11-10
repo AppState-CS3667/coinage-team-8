@@ -1,16 +1,16 @@
-interface CoinClientDemo{
-    public Coin makeCoin();
-}
+// interface CoinClientDemo{
+//     public Coin makeCoin();
+// }
 
-public class CoinFactory implements CoinClientDemo {
+// public class CoinFactory implements CoinClientDemo {
    
-    public static void main(String[] args){
-        CoinFactory cf = new Coinfactory();
-        cf.makeCoin(Dime);
-    }
+//     public static void main(String[] args){
+//         CoinFactory cf = new Coinfactory();
+//         cf.makeCoin(Dime);
+//     }
        
-    public Coin makeCoin() {
-        return new Coin();
-    }
-}
+//     public Coin makeCoin() {
+//         return new Coin();
+//     }
+// }
 
