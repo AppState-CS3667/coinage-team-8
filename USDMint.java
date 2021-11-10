@@ -7,7 +7,7 @@ public class USDMint extends Mint {
             return new HalfDollar();
         }
         else if (coin.equals("Quarter")) {
-            return new Quarter;
+            return new Quarter();
         }
         else if (coin.equals("Dime")) {
             return new Dime();

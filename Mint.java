@@ -1,5 +1,5 @@
-public abstract Mint {
-    public abstract void makeCoin();
+public abstract class Mint {
+    public abstract Coin makeCoin();
 
 
 }

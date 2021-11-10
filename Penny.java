@@ -1,5 +1,5 @@
 public class Penny extends Coin {
-    pulblic Penny() {
+    public Penny() {
         super("Penny", "USD", 0.01);
     }
 }
