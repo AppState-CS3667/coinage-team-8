@@ -1,4 +1,20 @@
 public class USDMint extends Mint {
+   private static USDMint UMint;
+   private boolean mint;
+    private USDMint()
+    {
+      mint = true;   
+    }
+
+    public static USDMint getInstance()
+    {
+        if(UMint == null)
+        {
+            UMint = new USDMint();
+        }
+        return UMint;
+    }
+
     public Coin makeCoin(String coin){
         if (coin.equals("Dollar")) {
             return new Dollar();
