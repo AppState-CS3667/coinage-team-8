@@ -45,5 +45,33 @@ public abstract class Coin {
             System.out.println("Inspecting failed");
         }
     }
+    
+    private static class NullCoin extends Coin{
+        @Override
+        public String getName()
+        {
+            return null;
+        }
+
+        @Override
+        public String getCountryCode()
+        {
+            return null;
+        }
+
+        @Override
+        public double getDenomination()
+        {
+            return 0;
+        }
+        public void smelt()
+        {
+
+        }
+
+    }
+
+    
+    
                                                                                                                                                                                             
 }

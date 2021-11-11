@@ -38,4 +38,5 @@ public class USDMint extends Mint {
             return null;
         }
     }
+
 }
