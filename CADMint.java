@@ -4,11 +4,11 @@ public class CADMint extends Mint{
      private CADMint() {
          mint = true;
      }
-     public static USDMint getInstance() {
-         if(UMint == null) {
-             UMint = new USDMint();
+     public static CADMint getInstance() {
+         if(CMint == null) {
+             CMint = new CADMint();
          }
-          return UMint;
+          return CMint;
      }
      public Coin makeCoin(String coin) {
          if (coin.equals("Toonie")) {
