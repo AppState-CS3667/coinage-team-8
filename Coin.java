@@ -46,7 +46,10 @@ public abstract class Coin {
         }
     }
 }
-private class NullCoin extends Coin{
+class NullCoin extends Coin{
+    public NullCoin() {
+        super(null, null, 0, null);
+    }
     @Override
     public String getName()
     {
@@ -67,9 +70,4 @@ private class NullCoin extends Coin{
     public void smelt()
     {
     }
-}
-
-    
-    
-                                                                                                                                                                                            
 }
