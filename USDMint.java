@@ -35,7 +35,7 @@ public class USDMint extends Mint {
             return new Penny();
         }
         else {
-            return null;
+            return new NullCoin();
         }
     }
 }
