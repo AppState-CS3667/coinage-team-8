@@ -45,5 +45,7 @@ public abstract class Coin {
             System.out.println("Inspecting failed");
         }
     }
-                                                                                                                                                                                            
+    public void smooth() {
+        System.out.println("Smoothing completed");
+    }                                                                                                                                                                                           
 }
