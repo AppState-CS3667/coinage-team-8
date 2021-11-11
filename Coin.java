@@ -38,12 +38,14 @@ public abstract class Coin {
     }
     public void inspect() {
         Random rand = new Random();
-        if (rand.nextInt(1000) > 1) {
+        if (rand.nextInt(12) > 1) {
             System.out.println("Inspecting completed");
         }
         else {
             System.out.println("Inspecting failed");
         }
     }
-                                                                                                                                                                                            
+    public void smooth() {
+        System.out.println("Smoothing completed");
+    }                                                                                                                                                                                           
 }
