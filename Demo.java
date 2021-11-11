@@ -12,17 +12,29 @@ class Demo {
             factory = new USDMint();
         }
         //else if (args[0].equals("CAD")) {
-        //    factory = new CADMint();
-        // }
+        //   factory = new CADMint();
+        //}
         else {
             factory = new USDMint();
         }
          
-        while(true)
+        while(true) //infinite loop keeps asking for Denomination input
         {
             System.out.println("Denomination please(0 to quit): ");
             String denomination = kb.nextLine();
             Coin c = factory.makeCoin(denomination);
+            //System.out.println("Smelting " + c.getName() +  "... " + c.smelt());
+            //System.out.println("Inspecting " + c.getName() + "..." + c.inspect());
+            //System.out.println("Smoothing" + c.getName() + "..." + c.smooth());
+            //System.out.println("Polishing" + c.getName() +  "..." + c.polish());
+            
+            c.smelt();
+            c.inspect();
+            //c.smooth();
+            c.polish();
+            
+
+
             if (denomination.equals("0"))
             {
                 break;    
@@ -30,10 +42,6 @@ class Demo {
         }
 
 
-        //System.out.println("Smelting...");
-        //System.out.println("Inspecting...");
-        //System.out.println("Smoothing...");
-        //System.out.println("Buffing...");
         
 
     }    

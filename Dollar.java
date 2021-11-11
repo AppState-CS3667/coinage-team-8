@@ -1,5 +1,5 @@
 public class Dollar extends Coin {
     public Dollar() {
-        super("Dollar", "USD", 1.00);
+        super("Dollar", "USD", 1.00, new DollarSmelt());
     }
 }
