@@ -15,7 +15,6 @@ default:
 	@echo "4 available targets: clean - removes editor tmpfiles and .class files"
 	@echo "____________________ compile - builds codebase"
 	@echo "____________________ test - runs JUnit5 tests"
-	@echo "____________________ check - runs Dr. Fenwick's checkstyle"
 	@echo "____________________ demo - runs client demo"
 	@echo "Just starting with make? Try these 4 make commands successively:"
 	@echo "________ make clean ; make compile ; make test ; make check"
@@ -43,7 +42,5 @@ clean:
 test: $(JUNIT5_JAR)
 	java -cp .:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path 
 
-check: mystyle.xml 
-	java $(CKSTYLE_COMMAND) -c ./mystyle.xml # Enter filename here  
 demo: Demo.java
 	java Demo  
