@@ -23,18 +23,16 @@ class Demo {
             System.out.println("Denomination please(0 to quit): ");
             String denomination = kb.nextLine();
             Coin c = factory.makeCoin(denomination);
-            //System.out.println("Smelting " + c.getName() +  "... " + c.smelt());
-            //System.out.println("Inspecting " + c.getName() + "..." + c.inspect());
-            //System.out.println("Smoothing" + c.getName() + "..." + c.smooth());
-            //System.out.println("Polishing" + c.getName() +  "..." + c.polish());
-            
+
+            System.out.print("Smelting " + c.getName() +  "... ");           
             c.smelt();
+            System.out.println("Inspecting " + c.getName() + "...");
             c.inspect();
+            //System.out.println("Smoothing" + c.getName() + "...");
             //c.smooth();
+            System.out.println("Polishing" + c.getName() +  "...");
             c.polish();
             
-
-
             if (denomination.equals("0"))
             {
                 break;    
