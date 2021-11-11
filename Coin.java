@@ -28,14 +28,14 @@ public abstract class Coin {
         smelt.smelt();
     }
     public void polish() {
-        Random rand = new Random();
+         Random rand = new Random();
         if (rand.nextInt(1000) > 1) {
             System.out.println("Polishing completed");
         }
         else {
             System.out.println("Polishing failed");
         }
-    }
+   }
     public void inspect() {
         Random rand = new Random();
         if (rand.nextInt(12) > 1) {
@@ -46,6 +46,13 @@ public abstract class Coin {
         }
     }
     public void smooth() {
-        System.out.println("Smoothing completed");
+        Random rand = new Random();
+        if (rand.nextInt(1000) > 1) {
+            System.out.println("Smoothing completed");
+        }
+        else {
+            System.out.println("Smoothing failed");
+        }
+
     }                                                                                                                                                                                           
 }

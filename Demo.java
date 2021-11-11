@@ -37,11 +37,11 @@ class Demo {
             c.smelt();
             System.out.println("Inspecting " + c.getName() + "...");
             c.inspect();
-            //System.out.println("Smoothing" + c.getName() + "...");
-            //c.smooth();
+            System.out.println("Smoothing" + c.getName() + "...");
+            c.smooth();
             System.out.println("Polishing" + c.getName() +  "...");
             c.polish();
-            System.out.println("(" + c.getName + ")" + c.getDenomination());
+            System.out.println("(" + c.getName() + ")" + c.getDenomination());
 
             if (denomination.equals("0"))
             {
