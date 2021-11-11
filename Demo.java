@@ -29,7 +29,7 @@ class Demo {
 
 
 
-            System.out.print("Name of coin please(0 to quit): ");
+            System.out.print("Enter coin denomination (0 to quit): ");
             String denomination = kb.nextLine();
             Coin c = factory.makeCoin(denomination);
 
