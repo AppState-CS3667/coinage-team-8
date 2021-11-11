@@ -16,22 +16,22 @@ public class USDMint extends Mint {
     }
 
     public Coin makeCoin(String coin){
-        if (coin.equals("Dollar")) {
+        if (coin.equals("1.00")) {
             return new Dollar();
         }
-        else if (coin.equals("HalfDollar")) {
+        else if (coin.equals("0.50")) {
             return new HalfDollar();
         }
-        else if (coin.equals("Quarter")) {
+        else if (coin.equals("0.25")) {
             return new Quarter();
         }
-        else if (coin.equals("Dime")) {
+        else if (coin.equals("0.10")) {
             return new Dime();
         }
-        else if (coin.equals("Nickel")) {
+        else if (coin.equals("0.05")) {
             return new Nickel();
         }
-        else if (coin.equals("Penny")) {
+        else if (coin.equals("0.01")) {
             return new Penny();
         }
         else {
