@@ -15,7 +15,7 @@ class Demo {
             System.out.println("Using USD: U.S. Coin Factory");
         }
         else if (args[0].equals("CAD")) {
-            //factory = new CADMint.getInstance();
+            factory = CADMint.getInstance();
             System.out.println("Using CAD: Canadian Coin Factory");
         }
         else {
