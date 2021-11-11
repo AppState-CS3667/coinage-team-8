@@ -29,17 +29,17 @@ class Demo {
 
 
 
-            System.out.print("Enter coin denomination (0 to quit): ");
+            System.out.print("Enter coin denomination (0.25 = Quarter, 0 to quit): ");
             String denomination = kb.nextLine();
             Coin c = factory.makeCoin(denomination);
 
-            System.out.print("\nSmelting " + c.getName() +  "... ");           
+            System.out.print("\nSmelting " + c.getName() +  "...");           
             c.smelt();
             System.out.print("\nInspecting " + c.getName() + "...");
             c.inspect();
-            System.out.print("\nSmoothing" + c.getName() + "... ");
+            System.out.print("\nSmoothing " + c.getName() + "...");
             c.smooth();
-            System.out.print("\nPolishing" + c.getName() +  "... ");
+            System.out.print("\nPolishing " + c.getName() +  "...");
             c.polish();
             System.out.print("\n(" + c.getName() + ")" + c.getDenomination());
 
