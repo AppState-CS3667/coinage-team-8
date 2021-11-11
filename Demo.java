@@ -15,7 +15,7 @@ class Demo {
             System.out.println("Using USD: U.S. Coin Factory");
         }
         else if (args[0].equals("CAD")) {
-            factory = new CADMint.getInstance();
+            //factory = new CADMint.getInstance();
             System.out.println("Using CAD: Canadian Coin Factory");
         }
         else {
@@ -29,19 +29,19 @@ class Demo {
 
 
 
-            System.out.print("Denomination please(0 to quit): ");
+            System.out.print("Name of coin please(0 to quit): ");
             String denomination = kb.nextLine();
             Coin c = factory.makeCoin(denomination);
 
-            System.out.print("Smelting " + c.getName() +  "... ");           
+            System.out.print("\nSmelting " + c.getName() +  "... ");           
             c.smelt();
-            System.out.println("Inspecting " + c.getName() + "...");
+            System.out.print("\nInspecting " + c.getName() + "...");
             c.inspect();
-            System.out.println("Smoothing" + c.getName() + "...");
+            System.out.print("\nSmoothing" + c.getName() + "... ");
             c.smooth();
-            System.out.println("Polishing" + c.getName() +  "...");
+            System.out.print("\nPolishing" + c.getName() +  "... ");
             c.polish();
-            System.out.println("(" + c.getName() + ")" + c.getDenomination());
+            System.out.print("\n(" + c.getName() + ")" + c.getDenomination());
 
             if (denomination.equals("0"))
             {
