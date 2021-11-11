@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 
 class Demo {
-    static Mint factory;
+    static Mint factory = null;
      
     public static void main(String[] args)
     {
         Scanner kb = new Scanner(System.in);
 
         if (args.length == 0){
-            factory = new USDMint();
+            factory = USDMint.getInstance(); 
             System.out.println("Problem with command line coin factory argument.");
             System.out.println("Possible coin factories include: USD & CAD");
             System.out.println("Using USD: U.S. Coin Factory");
@@ -19,7 +19,7 @@ class Demo {
             System.out.println("Using CAD: Canadian Coin Factory");
         }
         else {
-            factory = new USDMint();
+            factory = USDMint.getInstance(); 
             System.out.print("Using USD: U.S. Coin Factory");
         }
          

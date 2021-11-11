@@ -35,7 +35,7 @@ public class UsdMintTest{
 
     @Test
     public void testMakeCoin() {
-    mint = new USDMint();
+    mint = USDMint.getInstance(); 
     Coin penny = mint.makeCoin("Penny");
 	Coin nickel= mint.makeCoin("Nickel");
 	Coin dime = mint.makeCoin("Dime"); 
