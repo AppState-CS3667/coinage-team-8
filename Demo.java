@@ -10,17 +10,26 @@ class Demo {
 
         if (args.length == 0){
             factory = new USDMint();
+            System.out.println("Problem with command line coin factory argument.");
+            System.out.println("Possible coin factories include: USD & CAD");
+            System.out.println("Using USD: U.S. Coin Factory");
         }
-        //else if (args[0].equals("CAD")) {
-        //   factory = new CADMint();
-        //}
+        else if (args[0].equals("CAD")) {
+        //  factory = new CADMint();
+            System.out.println("Using CAD: Canadian Coin Factory");
+        }
         else {
             factory = new USDMint();
+            System.out.print("Using USD: U.S. Coin Factory");
         }
          
         while(true) //infinite loop keeps asking for Denomination input
         {
-            System.out.println("Denomination please(0 to quit): ");
+
+
+
+
+            System.out.print("Denomination please(0 to quit): ");
             String denomination = kb.nextLine();
             Coin c = factory.makeCoin(denomination);
 
@@ -32,11 +41,11 @@ class Demo {
             //c.smooth();
             System.out.println("Polishing" + c.getName() +  "...");
             c.polish();
-            
+
             if (denomination.equals("0"))
             {
                 break;    
-            }
+            }           
         }
 
 
